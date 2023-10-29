@@ -1,27 +1,27 @@
-<! HTML DOCTYPE>
-<html lang = "en">
-<kepala>
-    <meta charset = "UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <gaya>
- . bingkai luar {
-            batas: 2px hitam pekat;
-            tampilan: blok sebaris;
-            bantalan: 10piksel;
+    <style>
+        .border {
+            border: 2px solid black;
+            display: inline-block;
+            padding: 10px;
          }
-    </gaya>
-</kepala>
-<badan>
+    </style>
+</head>
+<body>
 <?php
-$jawabanIsset ="Isset adalah = Untuk menentukan apakah suatu variabel dideklarasikan dan berbeda dari null.<br><br>";
-$jawabanEmpty ="Empty adalah = Digunakan untuk menentukan apakah variabel ada dan nilai variabel tidak bernilai false.";
+$jawabanIsset ="Isset adalah =  Digunakan untuk memeriksa apakah suatu variabel sudah diatur atau belum. Fungsi isset () mengembalikan false jika variabel pengujian berisi nilai NULL..<br><br>";
+$jawabanEmpty ="Empty adalah = Empty digunakan untuk menggambarkan sesuatu yang tidak memiliki isi atau yang tidak terisi penuh. Misalnya, (gelas itu kosong) berarti gelas tidak berisi apa-apa.";
 
 function soal($jawabanIsset,$jawabanEmpty){
-    $style = "Aturstyle";
-    "<span class='$style'>$jawabanIsset$jawabanEmpty</span>";
+    $style = "aturstyle";
+    return "<span class='$style'>$jawabanIsset$jawabanEmpty</span>";
 }
 
-echo '<div class="bingkai luar">' . soal($jawabanIsset, $jawabanEmpty) . '</div>';
+echo '<div class="border">' . soal($jawabanIsset, $jawabanEmpty) . '</div>';
 ?>
-</badan>
-</.html>
+</body>
+</html>
